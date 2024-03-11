@@ -1,6 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { setupIonicReact } from "@ionic/react";
+
+import logo from "./logo.svg";
+import "./App.css";
+import '@ionic/react/css/core.css';
+
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
+
+setupIonicReact();
 
 function App() {
   return (
