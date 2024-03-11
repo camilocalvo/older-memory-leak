@@ -1,16 +1,16 @@
 import React from "react";
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom";
 
-import logo from "./logo.svg";
 import "./App.css";
 import "@ionic/react/css/core.css";
 
 import "@ionic/react/css/normalize.css";
 import "@ionic/react/css/structure.css";
 import "@ionic/react/css/typography.css";
-import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
+import TabsComponent from "./Tabs";
 
 setupIonicReact();
 
@@ -19,7 +19,8 @@ function App() {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route path="/" render={() => <Home />} />
+          <Route path="/" exact render={() => <Login />} />
+          <Route path="/tabs" component={TabsComponent} />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

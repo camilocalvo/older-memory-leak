@@ -1,10 +1,17 @@
 import React from "react";
-import { IonPage } from "@ionic/react";
+import { IonButton, IonPage } from "@ionic/react";
+import { useHistory } from "react-router";
 
 export const Login: React.FC = () => {
+  const history = useHistory();
+
+  const handleLogin = () => {
+    history.push("/tabs/home");
+  };
+
   return (
     <IonPage>
-      <h1>Login</h1>
+      <IonButton onClick={() => handleLogin()}>Login</IonButton>
     </IonPage>
   );
 };
